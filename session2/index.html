@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Web Foundations Workshop - Code Samples</title>
+  </head>
+  <body>
+    <!-- ==========================================
+       MODULE 1: SEMANTIC HTML
+       ========================================== -->
+
+    <!-- <header> represents introductory content or navigation links -->
+    <header>
+      <h1>Web Foundations Workshop</h1>
+      <p>A hands-on guide to building structured, accessible web pages.</p>
+
+      <!-- <nav> defines a block of primary navigation links -->
+      <nav>
+        <ul>
+          <li><a href="#semantics">Semantic HTML</a></li>
+          <li><a href="#assets">Core Elements & Assets</a></li>
+          <li><a href="#forms-tables">Forms & Tables</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- <main> holds the unique, primary content of the document (only one per page) -->
+    <main>
+      <!-- <section> groups standalone, thematic content with its own heading -->
+      <section id="semantics">
+        <h2>1. Semantic HTML Structure</h2>
+        <p>
+          Semantic tags describe their meaning to both the browser and screen
+          readers.
+        </p>
+
+        <!-- <article> represents a self-contained composition (e.g., blog post, news story) -->
+        <article>
+          <header>
+            <h3>Why Semantic HTML Matters</h3>
+            <p><time datetime="2026-10-19">October 19, 2026</time> by Samuel</p>
+          </header>
+
+          <p>
+            Using elements like <code>&lt;article&gt;</code> and
+            <code>&lt;section&gt;</code> improves accessibility, search engine
+            ranking (SEO), and code maintainability over generic
+            <code>&lt;div&gt;</code> tags.
+          </p>
+
+          <footer>
+            <p>Category: Web Accessibility &amp; Standards</p>
+          </footer>
+        </article>
+
+        <!-- <aside> represents tangential content (sidebars, callout boxes, related links) -->
+        <aside>
+          <h4>Quick Tip</h4>
+          <p>
+            Always use headings (<code>&lt;h1&gt;</code> through
+            <code>&lt;h6&gt;</code>) in sequential order without skipping
+            levels.
+          </p>
+        </aside>
+      </section>
+
+      <hr />
+
+      <!-- ==========================================
+         MODULE 2: CORE ELEMENTS & ASSETS
+         ========================================== -->
+
+      <section id="assets">
+        <h2>2. Core Elements & Assets</h2>
+
+        <!-- Text formatting & lists -->
+        <h3>Text Hierarchy & Lists</h3>
+        <p>
+          Combine <strong>strong emphasis</strong> (bold) and
+          <em>idiomatic text</em> (italics) for context.
+        </p>
+
+        <h4>Unordered List (Bullet Points)</h4>
+        <ul>
+          <li>HTML5 Document Type</li>
+          <li>UTF-8 Character Encoding</li>
+          <li>Accessible Alt Text</li>
+        </ul>
+
+        <h4>Ordered List (Sequential Steps)</h4>
+        <ol>
+          <li>Draft semantic layout</li>
+          <li>Embed visual assets</li>
+          <li>Validate accessibility</li>
+        </ol>
+
+        <!-- Images & Captions -->
+        <h3>Images and Visual Assets</h3>
+
+        <!-- <figure> and <figcaption> group media and its label -->
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97"
+            alt="A laptop showing HTML code on screen"
+            width="600"
+            height="350"
+            loading="lazy"
+          />
+          <figcaption>
+            Figure 1: Writing clean, semantic HTML code on a modern workstation.
+          </figcaption>
+        </figure>
+
+        <!-- Hyperlinks -->
+        <h3>Hyperlinks & Anchors</h3>
+        <p>
+          Learn more at the
+          <a
+            href="https://developer.mozilla.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            >MDN Web Docs</a
+          >
+          (opens in new tab).
+        </p>
+
+        <!-- Embedded Media (Audio & Video) -->
+        <h3>Audio and Video Assets</h3>
+
+        <p>Audio Player:</p>
+        <audio controls>
+          <source src="audio-sample.mp3" type="audio/mpeg" />
+          <source src="audio-sample.ogg" type="audio/ogg" />
+          Your browser does not support the audio element.
+        </audio>
+
+        <p>Video Player:</p>
+        <video controls width="500" poster="thumbnail.jpg">
+          <source src="video-sample.mp4" type="video/mp4" />
+          <track
+            kind="captions"
+            src="captions_en.vtt"
+            srclang="en"
+            label="English Captions"
+            default
+          />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <hr />
+
+      <!-- ==========================================
+         MODULE 3: FORMS, TABLES & MORE
+         ========================================== -->
+
+      <section id="forms-tables">
+        <h2>3. Forms, Tables & More</h2>
+
+        <!-- Data Tables -->
+        <h3>Accessible Data Table</h3>
+        <table>
+          <caption>
+            HTML5 Core Tag Reference Summary
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Tag</th>
+              <th scope="col">Category</th>
+              <th scope="col">Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;main&gt;</code></td>
+              <td>Semantic</td>
+              <td>Primary page content</td>
+            </tr>
+            <tr>
+              <td><code>&lt;figure&gt;</code></td>
+              <td>Media Asset</td>
+              <td>Self-contained graphic content</td>
+            </tr>
+            <tr>
+              <td><code>&lt;fieldset&gt;</code></td>
+              <td>Form Element</td>
+              <td>Group related form fields</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Total Tags Featured: 3 Examples</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <!-- Interactive Forms -->
+        <h3>Interactive Registration Form</h3>
+
+        <!-- <form> manages data collection -->
+        <form action="/submit-registration" method="post">
+          <!-- <fieldset> visually groups related input fields -->
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <div>
+              <label for="fullname">Full Name:</label>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="e.g. Jane Doe"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="email">Email Address:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jane@example.com"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="experience">Experience Level:</label>
+              <select id="experience" name="experience">
+                <option value="beginner">
+                  Beginner (Starting from scratch)
+                </option>
+                <option value="intermediate">
+                  Intermediate (Solidifying foundations)
+                </option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Workshop Preferences</legend>
+
+            <div>
+              <p>Preferred Topic Emphasis:</p>
+              <input
+                type="radio"
+                id="focus-semantics"
+                name="focus"
+                value="semantics"
+                checked
+              />
+              <label for="focus-semantics">Semantic HTML</label><br />
+
+              <input
+                type="radio"
+                id="focus-assets"
+                name="focus"
+                value="assets"
+              />
+              <label for="focus-assets">Core Assets &amp; Media</label><br />
+
+              <input type="radio" id="focus-forms" name="focus" value="forms" />
+              <label for="focus-forms">Forms &amp; Tables</label>
+            </div>
+
+            <div>
+              <br />
+              <input
+                type="checkbox"
+                id="newsletter"
+                name="newsletter"
+                value="yes"
+              />
+              <label for="newsletter"
+                >Send me workshop updates and cheat sheets</label
+              >
+            </div>
+
+            <div>
+              <br />
+              <label for="notes">Additional Questions or Notes:</label><br />
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                cols="50"
+                placeholder="What do you hope to learn?"
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <div>
+            <br />
+            <button type="submit">Register for Workshop</button>
+            <button type="reset">Reset Form</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- <footer> contains copyright, contact, or site-wide footer info -->
+    <footer>
+      <hr />
+      <p>
+        &copy; 2026 Web Foundations Workshop. All code samples released for
+        educational use.
+      </p>
+    </footer>
+  </body>
+</html>
