@@ -1,0 +1,29 @@
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.5;
+  }
+  
+  .highlight {
+    background-color: #fff3cd;
+    border-left: 4px solid #f0ad4e;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  button {
+    padding: 0.45rem 0.8rem;
+    cursor: pointer;
+  }
+  
+  #dynamic-list li {
+    margin: 0.25rem 0;
+  }

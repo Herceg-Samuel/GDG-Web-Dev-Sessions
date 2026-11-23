@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML DOM API Starter Boilerplate</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1 id="main-heading">DOM API Live Playground</h1>
+
+  <!-- 1. Selecting & modifying content -->
+  <p id="demo" data-status="initial">Original paragraph text.</p>
+
+  <!-- 2. Controls for live classroom demos -->
+  <div class="controls">
+    <button id="btn-text" type="button">Change Text &amp; HTML</button>
+    <button id="btn-style" type="button">Toggle Style &amp; Attribute</button>
+    <button id="btn-add" type="button">Add List Item</button>
+    <button id="btn-remove" type="button">Remove Last Item</button>
+  </div>
+
+  <!-- 3. Manipulating DOM structure -->
+  <ul id="dynamic-list">
+    <li class="item">First item</li>
+    <li class="item">Second item</li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
